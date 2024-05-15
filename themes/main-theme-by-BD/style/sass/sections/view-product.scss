@@ -1,0 +1,191 @@
+.view-product {
+    overflow: hidden;
+    .container-fluid{
+        --bs-gutter-x: 0;
+    }
+    &__container {
+        &__heading {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        &__content {
+            border-bottom: .1rem solid rgba(40, 99, 101, .5);
+
+            &__item {
+                &__paragraph {
+                    color: #546455;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        &__filter {
+            &__heading {
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+
+            &__title {
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+
+            .accordion {
+                --bs-accordion-border-color: unset;
+
+            }
+
+            .accordion-item {
+                border-bottom: .1rem solid rgba(40, 99, 101, .5);
+                border-bottom-left-radius: unset;
+                border-bottom-right-radius: unset;
+                background-color: transparent;
+
+                .accordion-button {
+                    padding-top: 2rem;
+                    background-color: transparent;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: #546455;
+                    border: none;
+                    box-shadow: unset;
+
+                    &__title {
+                        font-size: 1.2rem;
+                    }
+
+                    &::after {
+                        position: relative;
+                        top: -2.0rem;
+                    }
+
+                }
+
+                .form-check {
+                    &:not(:last-child) {
+                        border-bottom: .1rem solid rgba(40, 99, 101, .5);
+
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;
+                    }
+
+                    input[type="radio"],input[type="checkbox"] {
+                        border: 1rem solid #959595;
+                        margin-right: 1rem;
+                    }
+
+                    .form-label {
+                        color: #546455;
+                        font-size: 1.4rem;
+                    }
+
+                    &__paragraph {
+                        color: #546455;
+                        font-size: 1.2rem;
+
+                    }
+                }
+            }
+        }
+
+        &__info {
+            border-bottom: .1rem solid rgba(40, 99, 101, .5);
+
+            &__item {
+                &__paragraph {
+                    color: #546455;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        &__purchase {
+            border-bottom: .1rem solid rgba(40, 99, 101, .5);
+
+            &__heading {
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+
+            &__price {
+                &__paragraph {
+                    color: #546455;
+                    font-size: 1.2rem;
+                }
+            }
+
+            &__total {
+                border-top: .1rem solid rgba(40, 99, 101, .5);
+
+                &__paragraph {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        &__warning {
+            &__paragraph {
+                color: #546455;
+                font-size: 1.0rem;
+                font-style: italic;
+            }
+        }
+
+        &__footer {
+
+            &__btn,
+            &__link {
+                background-color: transparent;
+                color: #546455;
+                border-color: #546455;
+                font-weight: 700;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                border-radius: 0;
+
+                &:focus,
+                &:active,
+                &:hover {
+                    background-color: #546455 !important;
+                    border-color: #546455 !important;
+                    color: #fff !important;
+
+                }
+            }
+
+            &__btn {
+                background-color: #dee0dd;
+            }
+        }
+    }
+
+    &__slider__img{
+        cursor: pointer;
+    } 
+
+    &__slider {
+        &__img {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+
+        .slick-prev::before,
+        .slick-next::before {
+            color: #768377 !important;
+        }
+
+        .slick-prev::before {
+            content: url('../assets/prev-Icons.svg');
+        }
+
+        .slick-next::before {
+            content: url('../assets/next-Icons.svg');
+        }
+
+    }
+}

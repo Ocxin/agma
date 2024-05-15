@@ -1,0 +1,20 @@
+@mixin MinQuery($min) {
+    @media (min-width:#{$min}px) {
+        @content;
+    }
+}
+@mixin MaxQuery($max) {
+    @media (max-width:#{$max}px) {
+        @content;
+    }
+}
+@mixin MinHQuery($min) {
+    @media (min-height:#{$min}px) {
+        @content;
+    }
+}
+@mixin MaxHQuery($max) {
+    @media (max-height:#{$max}px) {
+        @content;
+    }
+}

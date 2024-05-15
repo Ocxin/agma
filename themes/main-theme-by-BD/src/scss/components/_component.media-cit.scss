@@ -1,0 +1,65 @@
+&.media-cit {
+  background-color: $color-green-light;
+  margin-top: 5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  p {
+    font-family: "Reem Kufi";
+  }
+  figure {
+    margin: 0;
+  }
+  img {
+    border-radius: 0;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 11.25rem 8.125rem 6.875rem;
+  }
+  .text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.4167;
+    letter-spacing: 0.01em;
+    color: $color-secondary;
+    position: relative;
+    &::before {
+      content: "\f10d";
+      font-family: "Font Awesome 6 Pro";
+      font-weight: 900;
+      font-size: 4rem;
+      color: $color-secondary;
+      position: absolute;
+      top: calc(-4rem - 1.875rem);
+      left: 0;
+    }
+  }
+  .author {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.01em;
+    color: $color-text;
+  }
+  @media only screen and (max-width: 767px) {
+    margin-top: 0;
+    padding:3rem 1.25rem;
+    .content {
+      padding: 0;
+    }
+    .text {
+      font-size: 1.125rem;
+      line-height: 1.5;
+      &::before {
+        font-size: 2.5rem;
+        top: calc(-2.5rem - 1.25rem);
+      }
+    }
+    .author {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+  }
+}

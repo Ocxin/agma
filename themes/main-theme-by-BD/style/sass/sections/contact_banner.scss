@@ -1,0 +1,93 @@
+@import '../mixins';
+
+.contact_banner {
+    &__body {
+        background-color: #546455;
+        color: #FFF;
+
+        &__content {
+            &__heading {
+                font-weight: 700;
+                font-size: 2rem;
+                line-height: 2.7rem;
+            }
+
+            &__paragraph {
+                font-weight: 400;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
+
+
+        }
+
+        &__link {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+
+            &,
+            &:visited,
+            &:active,
+            &:focus,
+            &:hover {
+                color: #FFF;
+            }
+        }
+
+
+        &__btn {
+            border: .1rem solid #FFF;
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            text-decoration: none;
+            border-radius: 0;
+
+            &,
+            &:visited,
+            &:focus,
+            &:active {
+                color: #FFF;
+            }
+
+            &:hover {
+                background-color: #E1D8CC;
+                color: #a18560;
+            }
+        }
+    }
+
+    @include respond(phone) {
+        &__body {
+            &__img {
+                margin-bottom: 2rem;
+            }
+
+            &__content {
+                margin-bottom: 2rem;
+
+
+
+                &__paragraph {
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                }
+            }
+            &__link {
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                &:not(:last-child){
+                    margin-bottom: 2rem;
+                }
+            }
+
+            &__btn {
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+            }
+        }
+    }
+}

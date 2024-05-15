@@ -1,0 +1,22 @@
+&.specific {
+  .tilehead {
+    height: 10.625rem;
+  }
+  p {
+    color: $color-text;
+    font-weight: 700;
+    line-height: 1.37;
+    margin-bottom: 0.938rem;
+  }
+  span {
+    font-weight: 400;
+  }
+  .separator,
+  .price {
+    color: $color-primary;
+  }
+  .separator{
+    font-weight: 700;
+    margin-inline:0.5rem;
+  }
+}

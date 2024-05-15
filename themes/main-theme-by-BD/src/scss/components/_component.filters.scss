@@ -1,0 +1,26 @@
+&.filters {
+  padding: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap:1.563rem;
+  .filter-btn {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    color: $color-gray-2;
+    border-bottom: 2px solid transparent;
+    row-gap: 0.5rem;
+    cursor: pointer;
+    &.active {
+      color: $color-text;
+      font-weight: 700;
+      border-bottom: 2px solid $color-secondary;
+      img {
+        filter: drop-shadow(0 0 0.3px black);
+      }
+    }
+  }
+}

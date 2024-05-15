@@ -1,0 +1,118 @@
+@import '../mixins';
+
+.main-faq {
+    &__content {
+        &__paragraph {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #2B2B2B;
+        }
+    }
+
+    &__fitter {
+
+        .form-check {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        label {
+            font-size: 14px;
+            line-height: 19px;
+            color: #2B2B2B;
+        }
+    }
+
+    &__dropdown {
+        .dropdown-toggle {
+            background-color: transparent;
+            border: 0;
+            border-radius: 0;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            color: #768377;
+
+            &:active{
+                color: #768377 !important;
+            }
+
+
+            &:active {
+                color: #000;
+                background-color: transparent;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .dropdown-toggle.show {
+            &::after {
+                display: none;
+            }
+        }
+
+        .dropdown-menu {
+            background-color: transparent;
+            position: unset !important;
+            border-radius: 0;
+            transform: unset !important;
+            border: none;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+        }
+
+        @include respond(sm-tab-port) {
+            .dropdown-toggle {
+                &::after {
+                    display: unset;
+                }
+            }
+
+            .dropdown-toggle.show {
+                &::after {
+                    display: unset;
+                }
+            }
+        }
+    }
+
+    .accordion {
+        --bs-accordion-border-color: unset;
+
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid #93B1B2;
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+        background-color: transparent;
+
+        .accordion-button {
+            background-color: transparent;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: #2B2B2B;
+            border: none;
+            box-shadow: unset;
+
+            &::after {
+                content: url('/site/themes/main-theme/style/assets/plus_Icons.svg');
+                background: none;
+            }
+
+            &:not(.collapsed)::after {
+                background: none;
+                content: url('/site/themes/main-theme/style/assets/minus.svg');
+                transform: unset;
+            }
+
+        }
+    }
+}

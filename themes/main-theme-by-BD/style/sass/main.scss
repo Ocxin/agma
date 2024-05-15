@@ -1,0 +1,12 @@
+@import './base';
+@import './mixins'; 
+@import './sections'; 
+@import './header.scss';
+@import './footer.scss';
+@import './custom-arrows.scss';
+
+.wpcf7-checkbox {
+  border: 0px ;
+  background: transparent !important;
+  float: none !important;
+}

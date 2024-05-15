@@ -1,0 +1,245 @@
+body {
+  article {
+    .ratio {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      iframe {
+        width: 67.125rem;
+        position: absolute;
+        left: -13%;
+        border-radius: $image-radio;
+      }
+    }
+    .media-container {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    img {
+      border-radius: $image-radio;
+      max-height: 33.75rem;
+    }
+  }
+
+  main {
+    padding-top: $header-height;
+  }
+  section {
+    padding: 7.5rem 0;
+    .title {
+      margin-bottom: 1.25rem;
+    }
+    .subtitle {
+      color: $color-gray-2;
+      font-size: 1.125rem;
+    }
+  }
+
+  .how-work {
+    background-color: $color-gray-6;
+    .box {
+      padding: 1.875rem;
+      border: 0.75px solid $color-gray-4;
+      margin-top: 3.125rem;
+      position: relative;
+      &:not(:nth-child(2)) {
+        &::after {
+          content: "\f061";
+          font-family: "Font Awesome 5 Free";
+          color: $color-white;
+          background-color: $color-secondary;
+          line-height: 1.75rem;
+          width: 1.75rem;
+          position: absolute;
+          font-size: 1rem;
+          font-weight: 600;
+          left: 0;
+          top: 25%;
+          transform: translateY(-50%) translateX(-50%);
+        }
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        color: $color-secondary;
+        font-weight: 700;
+        margin-top: 1.875rem;
+      }
+      p {
+        color: $color-gray-2;
+        margin-top: 1rem;
+      }
+    }
+  }
+  .image-with-pin {
+    .title {
+      margin-top: 6.25rem;
+      text-align: center;
+      color: $color-white;
+    }
+    .row {
+      position: relative;
+      &:first-of-type {
+        height: 64rem;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0) 32.79%
+          );
+        }
+      }
+
+      * {
+        z-index: 1;
+      }
+    }
+    .pin {
+      &::after {
+        content: "\2b";
+        font-family: "Font Awesome 5 Free";
+        color: $color-white;
+        background-color: $color-orange;
+        border-radius: 50%;
+        font-size: 1.375rem;
+        width: 1.375rem;
+        height: 1.375rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: 1.375rem solid rgba($color-orange, 0.2);
+        animation: pulse 2s infinite;
+        cursor: pointer;
+      }
+    }
+    .pin-popup {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -110%);
+      background-color: white;
+      padding: 1.25rem;
+      width: 12.5rem;
+      text-align: center;
+      img {
+        max-width: 100%;
+      }
+      h4 {
+        font-size: 1rem;
+        font-weight: 900;
+      }
+      p {
+        font-size: 0.875rem;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 103%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 0.625rem solid transparent;
+        border-top-color: white;
+      }
+    }
+  }
+  .su-misura-per-te {
+    position: relative;
+    background-color: $color-secondary;
+    background-image: url("../images/background.svg");
+    color: $color-white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    .subtitle {
+      color: $color-white;
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      + * {
+        z-index: 1;
+      }
+    }
+  }
+  .hero {
+    position: relative;
+    text-align: center;
+    height: 35rem;
+    margin-bottom: 5rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 53.5%,
+        rgba(0, 0, 0, 0.9) 100%
+      );
+    }
+    > * {
+      z-index: 1;
+    }
+
+    .hero__body__paragraph {
+      font-size: 0.813rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 0.92;
+      margin-bottom: 0.5rem;
+    }
+    .hero__body__heading {
+      font-size: 2.75rem;
+      line-height: 1.18;
+      margin-bottom: 1.875rem;
+      font-family: "Reem Kufi";
+    }
+  }
+  @import "archive";
+  @import "home";
+  @import "single-casetta";
+
+  @media only screen and (max-width: 767px) {
+    article{
+      .ratio {
+        iframe {
+          width: 100%;
+          left: 0;
+        }
+      }
+      img {
+        max-height: 18.75rem;
+      }
+    }
+    section{
+      padding: 3.75rem 0;
+    }
+    .image-with-pin {
+      display: none;
+    }
+    .how-work {
+      .box {
+        &:not(:nth-child(2)) {
+          margin-top: 0;
+          &::after {
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(90deg);
+          }
+        }
+        &:last-child{
+        }
+      }
+    }
+  }
+}

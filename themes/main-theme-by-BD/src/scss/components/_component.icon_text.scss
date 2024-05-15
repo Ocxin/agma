@@ -1,0 +1,22 @@
+&.icon_text{
+    .icon_text{
+        position: relative;
+    }
+    img{
+        position: absolute;
+        top:0;
+        width: 3.75rem;
+        height: 3.75rem;
+        left:calc(-3.75rem - 1.875rem);
+    }
+    h3{
+        margin-top: 1.875rem;
+        color: $color-primary;
+        font-size: 1.5rem;
+        
+    }
+    p{
+        margin-top: 0;
+    }
+
+}

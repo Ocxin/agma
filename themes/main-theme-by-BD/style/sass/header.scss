@@ -1,0 +1,99 @@
+@import './mixins';
+
+.header{
+    background-color: #546455;
+    max-height: 92px;
+    min-height: 82px;
+    &__logo{
+        color: #fff;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 19px;
+            letter-spacing: 1em;
+            &:visited,&:hover{
+                color: #fff;
+            }
+    }
+    & .mega-menu-description {
+        display: none !important;
+    }
+
+    
+}
+#mega-menu-wrap-mobile_menu .mega-menu-toggle + #mega-menu-mobile_menu {
+    height: calc(100vh - 92px) !important;
+    margin-top: 92px !important;
+    @include respond(sm-tab-port){
+        height: calc(100vh - 92px) !important;
+        margin-top: 92px !important;
+    }
+}
+
+#mega-menu-wrap-mobile_menu .mega-menu-toggle.mega-menu-open:after {
+    background-color: unset !important;
+}
+.mobile_menu_wrapper {
+    & .mega-toggle-label-closed {
+        width: 30px !important;
+        & img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+    
+}
+
+#mega-menu-wrap-mobile_menu .mega-menu-toggle.mega-menu-open .mega-toggle-block-1 .mega-toggle-label-open {
+    display: block !important;
+    width: 30px !important;
+    & img {
+        width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    }
+}
+#mega-menu-wrap-mobile_menu .mega-menu-toggle .mega-toggle-block-1 .mega-toggle-label .mega-toggle-label-closed {
+    display: block;
+}
+#mega-menu-wrap-mobile_menu .mega-menu-toggle.mega-menu-open .mega-toggle-block-1 .mega-toggle-label-closed {
+    display: none !important;
+}
+.mega-sub-menu {
+    display: block !important;
+}
+#mega-menu-mobile_menu {
+    @include respond(sm-tab-port){
+        width: 100vw !important;
+        max-width: 100% !important;
+    }
+}
+@media only screen and (max-width: 5000px) {
+    #mega-menu-wrap-mobile_menu .mega-menu-toggle + #mega-menu-mobile_menu {
+        right: -100% ;
+    }
+}
+@media only screen and (min-width:1055px) {
+    .mega-hide-992 {
+        display: none !important;
+    }
+    .first-992 {
+        border-top: 0px !important;
+    }
+}
+
+
+
+@media only screen and (max-width: 1055px) {
+    .desktop_menu_wrapper {
+        display: none !important;
+    }
+}
+
+#mega-menu-wrap-mobile_menu #mega-menu-mobile_menu li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row > ul.mega-sub-menu > li.mega-menu-column {
+    @include MaxQuery(768) {
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,50 @@
+header {
+  position: fixed;
+  width: 100%;
+  height: $header-height;
+  z-index: 9999;
+
+  .component.button {
+    display: none;
+  }
+  .mobile-menu-wrapper {
+    display: none;
+  }
+  .component.button {
+    &.primary {
+      display: block;
+      margin-inline: 0;
+    }
+    &.call {
+      display: none;
+      border-radius: 50%;
+      background-color: $color-whatsapp;
+      height: 2.5rem;
+      width: 2.5rem;
+      margin-inline: 0;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      color: $color-white;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .mobile-menu-wrapper {
+      display: block;
+    }
+    .desktop-menu-wrapper {
+      display: none;
+    }
+    .component.button {
+      &.call {
+        display: flex;
+      }
+      &.primary {
+        display: none;
+      }
+    }
+    .navbar-brand{
+      margin-right: auto;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import '../mixins';
+
+.blog_banner {
+    &__card {
+        height: 100%;
+
+        &__body {
+            &__date {
+                font-size: 1.0rem;
+                background: #546455;
+                color: #fff;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+
+            &__link {
+                font-size: 1.6rem;
+                font-weight: 700;
+                text-decoration: none;
+                &,
+                &:focus,
+                &:visited,
+                &:active,
+                &:hover{
+                    color: black;
+                }
+            }
+
+            &__paragraph {
+                font-size: 1.2rem;
+            }
+
+            @include respond(sm-tab-port) {
+                &__date {
+                    font-size: 1.2rem;
+                }
+
+                &__link {
+                    font-size: 1.8rem;
+                }
+
+                &__paragraph {
+                    font-size: 1.4rem;
+                }
+
+            }
+
+        }
+
+    }
+
+}

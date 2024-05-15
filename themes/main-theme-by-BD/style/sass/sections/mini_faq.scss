@@ -1,0 +1,43 @@
+.mini_faq {
+    &__content {
+        &__paragraph {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #2B2B2B;
+        }
+    }
+
+    .accordion {
+        --bs-accordion-border-color: unset;
+
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid #93B1B2;
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+        background-color: transparent;
+
+        .accordion-button {
+            background-color: transparent;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: #2B2B2B;
+            border: none;
+            box-shadow: unset;
+
+            &::after {
+                content: url('../assets/plus_Icons.svg');
+                background: none;
+            }
+
+            &:not(.collapsed)::after {
+                background: none;
+                content: url('../assets/minus.svg');
+                transform: unset;
+            }
+        }
+    }
+}

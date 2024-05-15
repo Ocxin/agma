@@ -1,0 +1,26 @@
+@import 'mixins.scss';
+
+.blog_archive_hero {
+        min-height: 50vh;
+        @include MaxQuery(992) {
+            min-height: 35vh;
+        }
+        padding-bottom: 4rem !important;
+        margin-bottom: 5rem;
+       
+}
+.blog_archive_hero_mobile {
+    & .hero__body {
+
+        padding-bottom: 4rem !important;
+        margin-bottom: 5rem;
+
+    }
+   
+
+}
+.blog_banner__card__body__heading {
+    & a,a:hover,a:focus,a:active {
+        color: #000 !important;
+    }
+}

@@ -1,0 +1,65 @@
+.split-section-with-form {
+    &__contact {
+        &__heading {
+            color: #546455;
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+
+        form {
+            label {
+                color: #546455;
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+
+                &:not(:first-child) {
+                    margin-top: 1rem;
+
+                }
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea {
+                border: .1rem solid #93B1B2;
+                background: #FFF;
+                border-radius: 0;
+                font-size: 1.4rem;
+                &:focus{
+                    box-shadow: none;
+                }
+
+
+                &::placeholder {
+                    color: #959595;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+            }
+            textarea{
+                height: 10.0rem;
+            }
+
+        }
+
+        &__btn {
+            background-color: transparent;
+            border: .1rem solid #a18560;
+            color: #a18560;
+            font-size: 1.6rem;
+            font-weight: 700;
+            border-radius:0;
+            &:focus,
+            &:active,
+            &:hover {
+                background-color: #E1D8CC !important;
+                border-color: #a18560 !important;
+                color: #a18560 !important;
+    
+            }
+        }
+
+    }
+}

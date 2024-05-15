@@ -1,0 +1,36 @@
+@import '../mixins';
+
+.team {
+    &__heading {
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    &__card {
+        height: 100%;
+        background-color: #F3F5F5;
+        &__body {
+
+            &__heading {
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+
+            &__paragraph {
+                color: #546455;
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+
+
+    @include respond(sm-tab-port) {
+        .slick-col {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+}

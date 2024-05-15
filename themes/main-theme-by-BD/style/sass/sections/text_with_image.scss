@@ -1,0 +1,33 @@
+@import '../mixins';
+
+.text_with_image {
+    &__text {
+        &__heading {
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 3rem;
+        }
+
+        &__paragraph {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+        }
+    }
+    @include respond(phone){
+        &__row{
+            flex-direction: column-reverse !important;
+        }
+        &__text {
+            &__heading {
+                font-size: 2rem;
+                line-height: 2.7rem;
+            }
+    
+            &__paragraph {
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+            }
+        }
+    }
+}

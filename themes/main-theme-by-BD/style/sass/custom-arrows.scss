@@ -1,0 +1,33 @@
+@import './mixins';
+
+.custom-arrows {
+    text-align: center;
+    display: none ;
+
+
+    .custom-next,
+    .custom-prev {
+        background-color:transparent;
+        color: #768377;
+        border: none;
+
+    }
+
+    .custom-next::before {
+        content: url('../assets/arrow-right.svg');
+    }
+
+    .custom-prev::before {
+        content: url('../assets/arrow-left.svg');
+
+
+    }
+
+
+    @include respond(phone) {
+        width: 100%;
+        display: flex;
+    }
+
+
+}

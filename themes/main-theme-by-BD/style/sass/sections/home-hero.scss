@@ -1,0 +1,27 @@
+@import '../mixins';
+
+.home-hero {
+    &__heading {
+        color: #546455;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    &__paragraph {
+        color: #2B2B2B;
+        font-size: 2.4rem;
+        font-weight: 700;
+    }
+
+    @include respond(sm-phone) {
+        &__heading {
+            font-size: 1.4rem;
+        }
+    
+        &__paragraph {
+            color: #2B2B2B;
+            font-size: 2.2rem;
+        }
+    }
+
+}

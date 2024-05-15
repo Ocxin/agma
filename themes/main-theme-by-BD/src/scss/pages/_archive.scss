@@ -1,0 +1,54 @@
+&.archive {
+  .hero {
+    margin-bottom: 0;
+    height: 18.75rem;
+    text-align: left;
+    &::before {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    .hero__body {
+      justify-content: center;
+    }
+  }
+  .tile {
+    width: 30%;
+    text-align: center;
+  }
+  .dropdown-menu {
+    padding: 0;
+  }
+  .accordion-item {
+    background-color: transparent;
+    border: none;
+  }
+  .accordion-button {
+    color: $color-text;
+    background-color: transparent;
+    border-bottom: 1px solid $color-gray-5;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+
+    &.collapsed {
+      border-bottom: 1px solid transparent;
+    }
+    &:focus {
+      border-color: $color-gray-5;
+
+      box-shadow: none;
+    }
+  }
+  .products__filter {
+    .component.button.secondary {
+      padding:1.25rem 1.875rem 1.25rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      font-weight: 800;
+      line-height: 1rem;
+      letter-spacing: 0.01em;
+    }
+  }
+}

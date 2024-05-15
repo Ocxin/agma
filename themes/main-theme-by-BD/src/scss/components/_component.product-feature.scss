@@ -1,0 +1,116 @@
+&.product-feature {
+  padding: 2.5rem 0 2.5rem 3.75rem;
+
+  .product-term {
+    text-transform: uppercase;
+    font-size: 0.813rem;
+    letter-spacing: 5%;
+    color: $color-secondary;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.25rem;
+  }
+  h1 {
+    font-weight: 700;
+    line-height: 1.0455;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.875rem;
+  }
+  .product-description {
+    margin-bottom: 1.875rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+  .feature,
+  .price {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.938rem;
+    row-gap: 0.938rem;
+    column-gap: 2.125rem; /* 34px */
+    border: 1px solid $color-gray-4;
+    border-radius: $button-radio;
+    margin-bottom: 0.938rem;
+    > div {
+      width: calc(50% - 1.063rem);
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.0129;
+      letter-spacing: 0.01em;
+      margin-left: 0.625rem;
+    }
+    span {
+      font-weight: 700;
+    }
+    img {
+      width: 1.625rem;
+      height: 1.625rem;
+    }
+  }
+  .price {
+    display: block;
+    p {
+      font-family: "Reem Kufi";
+    }
+    .current-price {
+      color: $color-secondary;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    del {
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: $color-gray-3;
+    }
+  }
+  .selector{
+    label{
+      font-size: 1.1rem;
+      font-weight: 700;
+      width: 100%;
+    }
+    select{
+      background-color: $color-beige;
+      line-height: 3rem;
+      border-radius: 0;
+      color:$color-text;
+      font-weight: 700;
+      &:focus{
+        outline: none;
+        border-color: $color-secondary;
+        box-shadow: 0 0 0 .25rem rgba($color-secondary, .25);
+        ;
+      }
+    }
+  }
+  .delivery-info{
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 1.875rem;
+    span{
+      color: $color-orange;
+      font-weight: 900;
+    }
+  }
+  @media only screen and (max-width:767px){
+    padding: 0rem 1rem 2.5rem 1rem;
+    .feature,
+    .price {
+      padding: 0.938rem;
+      row-gap: 0.938rem;
+      column-gap: 1.063rem;
+      > div {
+        width: 100%;
+      }
+      p {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+p {
+  font-size: 1rem;
+  font-family: "Nunito Sans";
+  line-height: 1.5;
+}
+h2 {
+  font-size: 2.75rem;
+  font-family: "Reem Kufi";
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.75rem;
+  font-family: "Reem Kufi";
+}
+h3 {
+  font-family: "Nunito Sans";
+  font-size: 1.125rem;
+  font-weight: 900;
+}
+a{
+  text-decoration: none;
+}
+
+article {
+  p,
+  li {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    color: $color-text;
+    margin-top: 2.5rem;
+  }
+  h2 {
+    font-family: "NuNito Sans";
+    font-size: 1.625rem;
+    font-weight: 300;
+    line-height: 2.125rem;
+    color: $color-gray-2;
+  }
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.938rem;
+    letter-spacing: 0.01em;
+    color: $color-primary;
+    margin-top: 3.75rem;
+  }
+  ul {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    list-style: none;
+    padding-left: 1.125rem;
+    li {
+      &:before {
+        content: "\2022"; // Codice del carattere per il pallino (Unicode)
+        color: $color-primary; // Colore del pallino
+        display: inline-block;
+        width: 1em; // Dimensione del pallino
+        margin-left: -1em; // Sposta il pallino all'indietro per allinearne il centro con il testo
+        position: absolute; // Posizionamento assoluto rispetto al testo
+        left: 0; // Posizionamento a sinistra del contenitore del testo
+      }
+    }
+  }
+  li {
+    margin-bottom: 1.563rem;
+    margin-top: 0;
+    position: relative; // Per consentire il posizionamento del pallino personalizzato
+  }
+}

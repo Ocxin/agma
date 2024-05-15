@@ -1,0 +1,51 @@
+@import '../mixins';
+
+.info_banner {
+    background-color: #dee0dd;
+    &__body {
+        &__heading {
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+            color: #546455;
+        }
+
+        &__contact {
+            color: #546455;
+            line-height: 25px;
+            &__link {
+                font-weight: 700;
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+                text-decoration: none;
+
+                &,
+                &:focus,
+                &:active,
+                &:visited,
+                &:hover {
+                    color: #546455;
+                }
+            }
+        }
+    }
+    @include respond(sm-phone){
+        &__body {
+            flex-wrap: wrap;
+            &__heading {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                margin-bottom: 1rem;
+            }
+    
+            &__contact {
+                color: #546455;
+                &__link {
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+    }
+
+}

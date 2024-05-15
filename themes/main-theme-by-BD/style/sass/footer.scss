@@ -1,0 +1,100 @@
+@import './mixins';
+
+.footer {
+    background-color: #546455;
+    color: #fff;
+
+    &__body {
+        border-bottom: 1px solid #dee0dd;
+
+        &__lists {
+            &__heading {
+                font-weight: 700;
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+                margin-bottom: 1.5rem;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+
+            li {
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            &__link {
+                width: 100%;
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+                text-decoration: none;
+
+                &,
+                &:focus,
+                &:active,
+                &:visited,
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        &__paragraph {
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+        }
+    }
+
+    @include respond(sm-tab-port) {
+        &__body {
+
+            &__lists {
+                &__heading {
+                    font-size: 1.8rem;
+                    line-height: 2.5rem;
+                }
+
+
+                li {
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                }
+
+                &__link {
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                }
+            }
+        }
+
+        &__copyright {
+            &__paragraph {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
+        }
+    }
+
+
+}
+.footer-categories {
+    width: 100%; 
+    & ul {
+        width: 100%;
+        display: flex !important;
+        & li {
+            width: 50%;
+        }
+    }
+}

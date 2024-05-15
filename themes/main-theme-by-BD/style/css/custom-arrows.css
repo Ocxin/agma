@@ -1,0 +1,1 @@
+.custom-arrows{text-align:center;display:none}.custom-arrows .custom-next,.custom-arrows .custom-prev{background-color:transparent;color:#768377;border:none}.custom-arrows .custom-next::before{content:url("../assets/arrow-right.svg")}.custom-arrows .custom-prev::before{content:url("../assets/arrow-left.svg")}@media (max-width: 47.99em){.custom-arrows{width:100%;display:flex}}

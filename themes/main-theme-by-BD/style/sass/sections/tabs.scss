@@ -1,0 +1,112 @@
+@import '../mixins';
+
+.tabs {
+
+    &__heading {
+        font-size: 1.6rem;
+    }
+
+    &__card {
+        background-color: #fff;
+        border: .1rem solid #546455;
+
+        &__body {
+            &__heading {
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+
+            &__paragraph {
+                color: #2B2B2B;
+                font-size: 1.2rem;
+            }
+        }
+
+    }
+
+    &__tabel {
+        background-color:#F3F5F5;
+        &__item {
+            &:not(:last-child){
+                border-bottom:.1rem solid #dee0dd;
+            }
+            &__key {
+                color: #546455;
+                font-size: 1.4rem;
+                font-weight: 700;
+                p{
+                    margin-bottom: 0;
+                }
+            }
+            &__value {
+                color: #546455;
+                font-size: 1.4rem;
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__btn {
+        background-color: #dee0dd;
+        color: #546455;
+        border-color: #546455;
+        font-size: 1.4rem;
+        font-family: Nunito Sans;
+        font-weight: 700;
+        border-radius: 0;
+
+        &:focus,
+        &:active,
+        &:hover {
+            background-color: #546455 !important;
+            border-color: #546455 !important;
+            color: #fff !important;
+
+        }
+        &__icon{
+            font-size: 1.8rem;
+        }
+    }
+
+    .nav.nav-tabs {
+        border: none;
+
+    }
+
+    .nav-item {
+        --bs-nav-tabs-border-width: none;
+    }
+
+    .nav-link {
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: #546455;
+
+    }
+
+    .nav-link.active {
+        color: #a18560;
+        border-bottom: .3rem solid #a18560;
+    }
+
+    @include respond(phone) {
+
+        &__card {
+
+            &__body {
+                &__heading {
+                    font-size: 1.8rem;
+
+                }
+
+                &__paragraph {
+                    font-size: 1.6rem;
+                }
+            }
+
+        }
+
+    }
+}

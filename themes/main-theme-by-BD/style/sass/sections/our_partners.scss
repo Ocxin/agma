@@ -1,0 +1,21 @@
+@import '../mixins';
+
+.our_partners {
+    &__heading {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.7rem;
+        color: #2B2B2B;
+    }
+
+    &__card {
+        height: 100%;
+
+    }
+    @include respond(sm-phone) {
+        &__heading {
+            font-size: 2.2rem;
+            line-height: 3rem;
+        }
+    }
+}

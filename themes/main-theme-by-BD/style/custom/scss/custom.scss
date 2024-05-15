@@ -1,0 +1,69 @@
+@import 'mixins.scss';
+@import 'blog.scss';
+a,a:hover,a:focus,a:active {
+    text-decoration: none !important;
+}
+.products__card__img {
+    height: 300px;
+    @include MinQuery(1400) {
+        height: 400px;
+    }
+    & img {
+        object-fit: cover;
+        height: 100%;
+    }
+}
+.header__logo {
+    & img {
+        height: 72px;
+    }
+}
+
+.info_banner {
+    & .container {
+        @include MaxQuery(768) {
+            max-width: 100% !important;
+        }
+    }
+}
+.mardello_section  {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+  .team__card__img {
+    & img {
+        @include MinQuery(768) {
+
+            height: 315px;
+        }
+        object-fit: cover;
+    object-position: top center;
+    }
+  }
+  .unique_list__card__img {
+    min-height: 70px;
+  }
+  .slide-box .slick-col:not(:last-child) {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  #slide-box {
+    & .slick-slider {
+        margin-bottom: 0px !important;
+    }
+  }
+  #home_product_tabs,#slide-box {
+    overflow: hidden;
+  }
+  .footer__copyright__paragraph {
+    & a,a:hover,a:active {
+
+        text-decoration: none;
+        color: #fff;
+    }
+  }
+  .locations__card__map {
+    & iframe {
+        width: 100% !important;
+    }
+  }

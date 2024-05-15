@@ -1,0 +1,52 @@
+@import '../mixins';
+
+.read_more {
+    &__heading {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.7rem;
+        color: #2B2B2B;
+    }
+
+    &__card {
+        height: 100%;
+        background-color: #546455;
+
+        &__btn {
+            border: .1rem solid #FFF;
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            text-decoration: none;
+            border-radius: 0;
+            &,
+            &:visited,
+            &:focus,
+            &:active{
+                color: #FFF;
+            }
+            &:hover{
+                background-color: #E1D8CC;
+                color: #a18560;
+            }
+        }
+
+    }
+
+    @include respond(sm-phone) {
+        &__heading {
+            font-size: 2.2rem;
+            line-height: 3.0rem;
+        }
+
+        &__card {
+            padding: 2rem 1rem !important;
+            &__btn {
+                font-weight: 700;
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@import '../mixins';
+
+.upper_footer {
+    &__card {
+        height: 100%;
+        background-color: #F3F5F5;
+
+        &__heading {
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 3rem;
+        }
+
+        &__paragraph {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+        }
+
+        &__btn {
+            background-color: #dee0dd !important;
+            color: #546455 !important;
+            border-color: #546455 !important;
+            font-weight: 700 !important;
+            font-size: 1.4rem !important;
+            line-height: 1.9rem !important;
+            border-radius: 0 !important;
+            opacity: 1 !important;
+            &:focus,
+            &:active,
+            &:hover {
+                background-color: #546455 !important;
+                border-color: #546455 !important;
+                color: #fff !important;
+
+
+            }
+        }
+
+        &__form {
+            input[type="email"] {
+                border-color: #546455;
+                width: 60%;
+                background-color: transparent;
+
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+
+                &,
+                &::placeholder {
+                    color: #546455;
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                    line-height: 1.9rem;
+                }
+
+                label {
+                    color: #2B2B2B;
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                }
+
+            }
+
+            input[type="submit"] {
+                width: 37%;
+            }
+        }
+
+        @include respond(xs-phone) {
+            &__heading {
+                font-size: 2.0rem;
+                line-height: 2.7rem;
+            }
+
+
+            &__form {
+                input[type="email"] {
+                    width: 100%;
+
+                    &,
+                    &::placeholder {
+                        font-size: 1.6rem;
+                        line-height: 2.2rem;
+                    }
+
+                }
+
+                input[type="submit"] {
+                    margin-top: 1rem;
+                    width: 100%;
+                    order: 2;
+                }
+            }
+        }
+    }
+
+}

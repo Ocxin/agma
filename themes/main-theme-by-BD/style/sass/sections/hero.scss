@@ -1,0 +1,57 @@
+@import '../mixins';
+.hero {
+    height: 50vh;
+    background-size: cover;
+    &--sm{
+        height: 50vh;
+        display: none;
+    }
+    &__body {
+        color: #fff;
+
+        &__path {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+        }
+
+        &__heading {
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 3.3rem;
+
+        }
+
+        &__paragraph {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    @include respond(phone){
+        display: none;
+        &--sm{
+            display:block;
+        }
+        &__body {
+            background-size: cover;
+            filter: brightness(90%);
+            color: #fff;
+            &--2{
+                color: #fff;
+            }
+    
+            &__heading {
+                font-size: 2.2rem;
+    
+            }
+    
+            &__paragraph {  
+                font-size: 1.6rem;
+            }
+        }
+
+    }
+
+}

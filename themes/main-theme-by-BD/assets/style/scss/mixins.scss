@@ -1,0 +1,135 @@
+$desktop: 1240;
+$mid: 992;
+$sm: 768;
+$xs: 480;
+$fw: 500;
+$pop:"Poppins",
+"sans-serif;";
+$cor:"Cormorant Garamond",
+"serif;";
+$lato:"Lato",
+"sans-serif;";
+@mixin MediaQuery($min, $max) {
+    @media all and (min-width:#{$min}px) and (max-width:#{$max}px) {
+        @content;
+    }
+}
+
+@mixin MinQuery($min) {
+    @media (min-width:#{$min}px) {
+        @content;
+    }
+}
+
+@mixin MaxQuery($max) {
+    @media (max-width:#{$max}px) {
+        @content;
+    }
+}
+
+@mixin MinHQuery($min) {
+    @media (min-height:#{$min}px) {
+        @content;
+    }
+}
+
+@mixin MaxHQuery($max) {
+    @media (max-height:#{$max}px) {
+        @content;
+    }
+}
+
+@mixin gen() {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+@mixin dinp() {
+    background: #dadbd6;
+    border-radius: 50px !important;
+    padding: 20px 10px !important;
+    color: #fff;
+    font-family: $go-li;
+    font-size: 18px;
+}
+
+@mixin iphonex() {
+    @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+        @content;
+    }
+}
+
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1)+$replace+str-replace( str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+@mixin font-face( $name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+    $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_"));
+    $formats: ( otf: "opentype", ttf: "truetype");
+    @each $ext in $exts {
+        $extmod: if( map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append( $src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+@mixin iPhone($device) {
+    @if $device=="iphone" {
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+            @content;
+        }
+    }
+    @if $device=="iphoneP" {
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+            @content;
+        }
+    }
+    @if $device=="iphoneL" {
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
+
+@mixin iPhone5($device) {
+    @if $device=="All" {
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            @content;
+        }
+    }
+    @if $device=="P" {
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+            @content;
+        }
+    }
+    @if $device=="L" {
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
+
+@mixin iPad() {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+        @content;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');

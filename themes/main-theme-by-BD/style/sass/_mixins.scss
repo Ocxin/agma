@@ -1,0 +1,53 @@
+@mixin respond($brackpoint) {
+
+    @if $brackpoint == xs-phone {
+        @media ( max-width : 25em){ @content }; //400px
+    }
+    @if $brackpoint == sm-phone {
+        @media ( max-width : 35.99em){ @content }; //575px
+    }
+
+    @if $brackpoint == phone {
+        @media ( max-width : 47.99em){ @content }; //767px
+    }   
+    @if $brackpoint == sm-tab-port {
+        @media ( max-width : 61.99em){ @content }; //991px
+    }
+
+    @if $brackpoint == tab-port {
+        @media ( max-width : 64em){ @content }; //1024px
+    }
+    @if $brackpoint == lg-tab-port {
+        @media ( max-width : 68.75em){ @content }; //1100px
+    }
+    @if $brackpoint == sm-tab-land {
+        @media ( max-width : 80em){ @content }; //1280px
+    }
+    @if $brackpoint == md-tab-land {
+        @media ( min-width : 84em){ @content }; //1344px
+    }
+    @if $brackpoint == tab-land {
+        @media ( max-width : 87.5em){ @content }; //1400px
+    }
+
+}
+@mixin MinQuery($min) {
+    @media (min-width:#{$min}px) {
+        @content;
+    }
+}
+@mixin MaxQuery($max) {
+    @media (max-width:#{$max}px) {
+        @content;
+    }
+}
+@mixin MinHQuery($min) {
+    @media (min-height:#{$min}px) {
+        @content;
+    }
+}
+@mixin MaxHQuery($max) {
+    @media (max-height:#{$max}px) {
+        @content;
+    }
+}

@@ -1,0 +1,46 @@
+&.accordion {
+    margin-bottom: 5rem;
+  .accordion-item {
+    border: none;
+    margin-top: 0.938rem;
+    margin-bottom: 0.938rem;
+  }
+  .accordion-button {
+    border-radius:$container-radio;
+    padding: 1.25rem 1.875rem;
+    font-family: "Nunito Sans";
+    font-size: 1.313rem;
+    font-weight: 800;
+    line-height: 1.5rem;
+    letter-spacing: 0.01em;
+    box-shadow: 10px 20px 40px 0px #00000014;
+    background-color: $color-green-light;
+    color: $color-text;
+
+    &:hover {
+      z-index: 0;
+    }
+    &:after {
+      background-image: none;
+      content: "\f056";
+      font-family: "Font Awesome 6 Pro";
+      font-weight: 900;
+      font-size: 1.85rem;
+      transform: none;
+      color: $color-secondary;
+    }
+    &.collapsed {
+      background-color: $color-white;
+      font-weight: 600;
+      &::after {
+        content: "\f055";
+      }
+    }
+  }
+  .accordion-body {
+    padding-inline: 3.625rem;
+  }
+  h3 {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,81 @@
+.locations {
+    &__heading {
+        color: #2B2B2B;
+        font-size: 2.0rem;
+        font-weight: 700;
+    }
+
+    &__card {
+        border: .1rem solid #546455;
+
+        &__body {
+            border-bottom: .1rem solid #546455;
+
+            &__heading {
+                color: #2B2B2B;
+                font-size: 1.8rem;
+                font-weight: 700;
+            }
+
+            &__paragraph {
+                color: #2B2B2B;
+                font-size: 1.4rem;
+                font-weight: 400;
+            }
+
+            &__list {
+                &__item {
+                    &:not(:last-child){
+                        margin-bottom: 1rem;
+                    }
+                    &__paragraph {
+                        color: #546455;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+
+                        p {
+                            margin-bottom: 0;
+                        }
+
+                        span {
+                            font-weight: 700 !important;
+
+                        }
+                    }
+
+                    &__link {
+                        text-decoration: none;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        &,
+                        &:focus,
+                        &:active,
+                        &:visited,
+                        &:hover {
+                            color: #546455;
+                        }
+                    }
+                }
+            }
+
+            &__btn {
+                background-color: transparent;
+                color: #a18560;
+                border-color: #a18560;
+                font-weight: 700;
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+                border-radius: 0;
+
+                &:focus,
+                &:active,
+                &:hover {
+                    background-color: #E1D8CC !important;
+                    border-color: #a18560 !important;
+                    color: #a18560 !important;
+
+                }
+            }
+        }
+    }
+}

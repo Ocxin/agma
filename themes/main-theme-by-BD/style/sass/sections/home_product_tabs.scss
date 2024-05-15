@@ -1,0 +1,206 @@
+@import '../mixins';
+
+.home_product_tabs {
+    &__paragraph {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        color: #2B2B2B;
+    }
+
+    &__slider-wrapper {
+        width: calc(100% + 30px); //we need more width for the shadows on the edges
+        padding: 0 15px; //space for the shadows
+        margin-left: -15px; //put the div in its original position
+        overflow: hidden; //hide the overflow
+    }
+
+    &__card {
+        background-color: #fff;
+        height: 100%;
+        border: 1px solid #546455;
+
+        &__body {
+            &__paragraph {
+                font-weight: 700;
+                font-size: 1.0rem;
+                line-height: 1.4rem;
+                color: #768377;
+            }
+
+            &__heading {
+                font-weight: 700;
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                color: #2B2B2B;
+                border-bottom: 1px solid #93B1B2;
+            }
+
+            &__info {
+                border-bottom: .1rem solid #93B1B2;
+            }
+
+            &__items {
+                &:not(:last-child) {
+                    margin-right: 5rem;
+                }
+
+                &__paragraph {
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                    color: #768377;
+                }
+            }
+
+            &__btn {
+                background-color: #dee0dd;
+                color: #546455;
+                border-color: #546455;
+                font-weight: 700;
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+                border-radius: 0;
+
+                &:focus,
+                &:active,
+                &:hover {
+                    background-color: #546455 !important;
+                    border-color: #546455 !important;
+                    color: #fff !important;
+
+                }
+            }
+
+
+
+
+        }
+
+
+    }
+
+    &__btn {
+        background-color: transparent;
+        color: #a18560;
+        border-color: #a18560;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        border-radius: 0;
+
+        &:focus,
+        &:active,
+        &:hover {
+            background-color: #E1D8CC !important;
+            border-color: #a18560 !important;
+            color: #a18560 !important;
+
+        }
+    }
+
+
+    .nav.nav-tabs {
+        border: none;
+
+    }
+
+    .nav-item {
+        --bs-nav-tabs-border-width: none;
+    }
+
+    .nav-link {
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        color: #546455;
+
+    }
+
+    .nav-link.active {
+        color: #a18560;
+        border-bottom: 3px solid #a18560;
+    }
+
+    .slick-list {
+        overflow: visible;
+    }
+
+    .slick-prev {
+        left: -5rem;
+        top: 50%;
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+        color: #768377 !important;
+    }
+
+    .slick-prev::before {
+        content: url('../assets/arrow-left.svg');
+    }
+
+    .slick-next::before {
+        content: url('../assets/arrow-right.svg');
+    }
+
+    .slick-col {
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        &:hover {
+            box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+        }
+    }
+
+
+    @include respond(phone) {
+        &__paragraph {
+            font-weight: 400;
+            font-size: 1.6rem;
+        }
+
+        &__card {
+            &__body {
+                &__paragraph {
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+                }
+
+                &__heading {
+                    font-size: 1.8rem;
+                    line-height: 2.5rem;
+                }
+
+                &__items {
+                    &__paragraph {
+                        font-size: 1.4rem;
+                        line-height: 1.9rem;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    @include respond(xs-phone) {
+
+        &__card {
+            &__body {
+                &__items {
+                    &__paragraph {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+}

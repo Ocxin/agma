@@ -1,0 +1,30 @@
+@import '../mixins';
+
+.intro_banner {
+    &__heading {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        color: #546455;
+    }
+
+    &__paragraph {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        color: #2B2B2B;
+    }
+
+    @include respond(phone) {
+        &__heading {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    
+        &__paragraph {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+
+}

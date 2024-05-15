@@ -1,0 +1,40 @@
+&.contentlist {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+  }
+  .swiper-slide {
+    width: 25%;
+  }
+  .swiper-notification {
+    display: none;
+  }
+  &.left_image_grid {
+    background-color: $color-beige;
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.125rem;
+    }
+    .component.button {
+      grid-column: -1 / 1;
+    }
+    .image {
+      width: 31.25rem;
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  @import 'component.contentlist.related-products';
+  @media only screen and (max-width:767px){
+    .swiper-slide {
+      width: 75%;
+    }
+
+  }
+}

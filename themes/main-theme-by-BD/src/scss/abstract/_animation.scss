@@ -1,0 +1,11 @@
+@keyframes pulse {
+  0%,
+  100% {
+    outline: 0.3rem solid rgba($color-orange, 0.2);
+    background-color: rgba($color-orange, 0.5);
+  }
+  50% {
+    outline: 1rem solid rgba($color-orange, 0.6);
+    background-color: rgba($color-orange, 1);
+  }
+}

@@ -1,0 +1,50 @@
+footer {
+  h3 {
+    color: $color-primary;
+    font-size: 1.125rem;
+    margin-bottom: 3.125rem;
+  }
+  .header__logo {
+    margin-bottom: 2.625rem;
+  }
+  .footer__body__lists {
+    span {
+      color: $color-primary;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1rem;
+      color: $color-white;
+    }
+  }
+  .wpcf7 {
+    label {
+      color: $color-primary;
+      font-size: 0.75rem;
+    }
+    .form-check {
+      display: flex;
+      margin: 2.375rem auto;
+    }
+    .form-check-label {
+      font-size: 0.813rem;
+      color: $color-white;
+      a {
+        font-size: 0.813rem;
+        color: $color-white;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .form-control {
+      background-color: transparent;
+      border: 1px solid $color-primary;
+      color: $color-beige;
+      line-height: 3rem;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}

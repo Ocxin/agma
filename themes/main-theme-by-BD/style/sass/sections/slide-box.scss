@@ -1,0 +1,77 @@
+@import '../mixins';
+
+.slide-box {
+    &__card {
+        border: 0.75px solid  #546455;
+        height: 100%;
+
+        &__body {
+
+            &__heading {
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            &__paragraph {
+                font-size: 16px;
+            }
+
+            @include respond(sm-tab-port) {
+
+                    &__heading {
+                        font-size: 1.8rem;
+                    }
+
+                    &__paragraph {
+                        font-size: 1.4rem;
+                    }
+            }
+
+        }
+
+    }
+
+    &__btn {
+        background-color: transparent;
+        color: #a18560;
+        border-color: #a18560;
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        border-radius: 0;
+
+        &:focus,
+        &:active,
+        &:hover {
+            background-color: #E1D8CC !important;
+            border-color: #a18560 !important;
+            color: #a18560 !important;
+
+        }
+    }
+    
+    .slick-col{
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+    }
+
+    .slick-prev {
+        left: -5rem;
+        top: 50%;
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+        color: #768377 !important;
+    }
+
+    .slick-prev::before {
+        content: url('../assets/arrow-left.svg');
+    }
+
+    .slick-next::before {
+        content: url('../assets/arrow-right.svg');
+    }
+
+}
